@@ -8,6 +8,7 @@ public class Brick : MonoBehaviour {
 	public int MaxHits;
 	private int numHitsTaken;
     public Renderer Rend;
+    private GameObject smoke;
     
     private static readonly Dictionary<int, Color> colorMap = 
         GameParameters.ColorMap;
@@ -42,12 +43,20 @@ public class Brick : MonoBehaviour {
         Rend.material.shader = Shader.Find("Standard");
         SetColor();
         
+        smoke = Resources.Load<GameObject>("Prefabs/Smoke");
+        
 	}
 
 	void OnCollisionEnter(Collision other){
 		numHitsTaken++;
 		
 		if(numHitsTaken >= MaxHits){
+            GameObject smokePuff = 
+                Instantiate(smoke, transform.position, Quaternion.identity)
+                    as GameObject;
+            
+            smokePuff.GetComponent<ParticleSystem>().startColor = 
+                colorMap[1];
             
             UnityEngine.Object.Destroy(gameObject);
 			

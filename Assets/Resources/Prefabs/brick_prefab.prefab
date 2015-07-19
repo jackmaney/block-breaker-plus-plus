@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2334372}
   - 114: {fileID: 11483392}
   - 54: {fileID: 5466532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: brick_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,6 +125,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Interpolate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

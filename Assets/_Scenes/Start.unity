@@ -727,7 +727,7 @@ GameObject:
   - 222: {fileID: 823644653}
   - 114: {fileID: 823644652}
   m_Layer: 5
-  m_Name: Subtitle
+  m_Name: Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -748,7 +748,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -2.5, y: 0}
-  m_SizeDelta: {x: 411, y: 29}
+  m_SizeDelta: {x: 498, y: 56}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &823644652
 MonoBehaviour:
@@ -775,7 +775,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Smash those blocks!
+  m_Text: 'Left Mouse Button to release the ball
+
+    Then Left Mouse Button again to fire!'
 --- !u!222 &823644653
 CanvasRenderer:
   m_ObjectHideFlags: 0
