@@ -5,7 +5,7 @@ using System.IO;
 
 public class GameParameters : MonoBehaviour {
 
-    public static string Version = "1.0.2";
+    public static string Version = "1.0.3";
     
     public static bool TakeScreenShotOfLevel = false;
 
