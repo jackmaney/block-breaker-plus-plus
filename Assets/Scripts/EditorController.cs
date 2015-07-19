@@ -20,6 +20,8 @@ public class EditorController : MonoBehaviour {
     
     private Text levelNameText;
     
+    private SaveStateController saveStateController;
+    
 	// Use this for initialization
 	void Start () {
     
@@ -27,7 +29,9 @@ public class EditorController : MonoBehaviour {
         Destroy(GameObject.Find("SavePanel"));
         Destroy(GameObject.Find("NamePanel"));
         #endif
-    
+        
+        saveStateController = GameObject.Find("Save State Controller").
+                                GetComponent<SaveStateController>();
         hitsIndicator = GameObject.Find("HitsIndicator")
                             .GetComponent<Text>();
         sceneManager = GameObject.FindObjectOfType<SceneManager>();
@@ -135,7 +139,11 @@ public class EditorController : MonoBehaviour {
     }
     
     public void SaveCustomLevel(){
-        GetLevel().Save();
+        
+        if(!saveStateController.IsSaving){
+            saveStateController.StartSaving();
+            GetLevel().Save();
+        }
     }
     
     public void PlayCustomLevel(){

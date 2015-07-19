@@ -28,7 +28,7 @@ public class ContentFiller : MonoBehaviour {
             GameObject loadLevelButton = 
                     Instantiate(LevelPrefab) as GameObject;
             
-            Text nameText = loadLevelButton.GetComponentInChildren<Text>();
+            Text nameText = loadLevelButton.GetComponent<Text>();
             
             
             nameText.text = customLevels[i].Name;
@@ -39,12 +39,6 @@ public class ContentFiller : MonoBehaviour {
             loadLevelButton.GetComponent<RectTransform>().
                 SetParent(ContentPanel, false);
             
-            //RectTransform rt = loadLevelButton.GetComponent<RectTransform>();
-            //RectTransform cprt = ContentPanel.GetComponent<RectTransform>();
-            
-            //rt.sizeDelta = new Vector2(cprt.sizeDelta.x, cprt.sizeDelta.y);
-            
-            //rt.sizeDelta = new Vector2(cprt.sizeDelta.x, 100);
         }
     }
     

@@ -5,6 +5,10 @@ using System.IO;
 
 public class GameParameters : MonoBehaviour {
 
+    public static string Version = "1.0.2";
+    
+    public static bool TakeScreenShotOfLevel = false;
+
     public static bool AutoPlay = false;
 
     public static bool GoToLoadingScreen = false;
